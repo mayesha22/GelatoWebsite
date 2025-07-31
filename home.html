@@ -23,13 +23,27 @@
 </style>
 
 -->
+
+<!-- changing so that the links are not underlined and have a different color
+<style>
+a:link {
+    text-decoration: none;
+    color: rgb(141, 7, 7);
+}
+a:visited {
+    color: rgb(141, 7, 7);
+    text-decoration: none;
+}
+</style>
+
+-->
 <!-- same content as div just testng the selector function -->
 <style>
     div {
-        border: 4px outset orangered; padding: 30px; font-family: Georgia, 'Times New Roman', Times, serif;
+        border: 4px outset orangered; padding: 30px; font-family: Georgia, 'Times New Roman', Times, serif; 
     }
 #written-content {
-         border: 4px outset orangered; padding: 30px; font-family: Georgia, 'Times New Roman', Times, serif;
+         border: 4px outset orangered; padding: 30px; font-family: Georgia, 'Times New Roman', Times, serif; width: 90%; height: 150px;
 }
 
 </style>
@@ -39,13 +53,21 @@
     <!-- body starts here--> <!-- need to add home , gallery, about and contact and footer section at end-->
     <body>
         <!--Nav bar -->
+
+<nav> 
+<a href="nav-bar/products.html" target="_blank" > Products</a> 
+<a href="nav-bar/about-us.html" target="_blank" > About Us</a>
+<a href="nav-bar/contact-us.html" target="_blank">Contact Us</a>
+</nav>
+        <!-- using list tag instead of nav tag
         <div>
-            <ul>
-                <li> <a href="nav-bar/products.html">Products</a> </li>
-                <li> <a href="nav-bar/about-us.html">About us</a></li>
-                <li> <a href="nav-bar/contact-us.html">Contact us</a></li>
+            <ul class="custom-inline">
+                <li> <a href="nav-bar/products.html" target="_blank" > Products</a> </li>
+                <li> <a href="nav-bar/about-us.html" target="_blank" > About Us</a></li>
+                <li> <a href="nav-bar/contact-us.html" target="_blank">Contact Us</a></li>
             </ul>
         </div>
+        -->
       <div class="outlinecustom">
         <h1> Welcome to the wonderful world of Gelato!</h1>
         <a href="https://www.thekitchn.com/whats-the-difference-between-ice-cream-and-gelato-word-of-mouth-119657">
@@ -74,7 +96,7 @@
     <!-- second main section/list with places to eat and its own border-->
     </p>
 
-    <div>
+    <div id="written-content" >
       <h2> Best places to have Gelato in Rome, Italy </h2>
       <ol>
         <li> <a href="https://share.google/B5KFg1qwp2DLmaESJ">Come il Latte</a></li>
@@ -95,6 +117,5 @@
      <p>  
     <a href="mailto:mayesha51@gmail.com">We would love to hear from you, click here to send a mail to us!</a>
 </p>
-   
     </body>
 </html>
