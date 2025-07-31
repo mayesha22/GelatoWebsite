@@ -10,6 +10,10 @@
     color: green;
  }
 
+ #no-bullets {
+    list-style-type:none;
+ }
+
  #orangeintro {
     font-size: 20px;
     color: orangered;
@@ -19,3 +23,4 @@
     border: 7px outset rgb(155, 142, 26);
     padding: 20px;
 }
+
