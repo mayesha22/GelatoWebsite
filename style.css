@@ -19,15 +19,29 @@
     
  }
 */
+
+/* first paragraph with orange colouring */
+
  #orangeintro {
     font-size: 20px;
     color: orangered;
 }
 
-.outlinecustom {
-    border: 7px outset rgb(155, 142, 26);
-    padding: 20px;
+/* centering my gelato main pic */
+
+.center-box {
+  border: 4px outset rgb(253, 134, 130);
+  margin-top: 130px;           /* margin-top to push it down from the nav bar */
+  display: flex;
+  flex-direction: column;       /* stack content vertically - What direction should things go*/
+  justify-content: center;      /* vertical centering - how we position things in that direction e.g jutify content:center = center along the axis but justify content:space-between -> controls spacing */
+  align-items: center;          /* horizontal centering , align-items: center centers everything horizontally within the flex container.*/
+  height: 100vh;                /* full viewport height */
+  background-color: beige;
+  padding: 30px;
+  text-align: center;          /* centers text within the div - text and inline elements. horzonatally aligns inline content liek img and span inside a block*/
 }
+
 
 /* this is the css syntax for making the list element inline */
 /*
@@ -50,13 +64,26 @@ nav {
 
 }
 */
+
+/* for the nav bar styling */
+
+/* for positioning only */
 nav {
+  position: fixed;         /* keeps the nav bar at the top of the page */
+  top: 0;                 /* positions it at the top */
+  left: 0;                /* positions it at the left */
+  width: 100%;            /* makes the nav bar full width */
   display: flex;
-  justify-content: center;     /* center the nav items */
+  justify-content: center;     /* center the nav items */       
   gap: 110px;                   /* space BETWEEN items */
-  font-size: 25px;
-  color: rgb(110, 9, 9);
-  font-family: 'Times New Roman', Times, serif;
+  z-index: 1000px;            /* makes sure the nav bar is on top of other elements */
+  background-color: rgb(185, 52, 107);
   padding: 50px;
 }
 
+/* for colouring/format of each section */
+nav a {
+  color: beige;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 25px;
+}
