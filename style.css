@@ -27,14 +27,14 @@
     color: orangered;
 }
 
-/* centering my gelato main pic */
+/* centering of the gelato main pic */
 
 .center-box {
   border: 4px outset rgb(253, 134, 130);
-  margin-top: 130px;           /* margin-top to push it down from the nav bar */
+  margin-top: 89px;           /* margin-top to push it down from the nav bar */
   display: flex;
   flex-direction: column;       /* stack content vertically - What direction should things go*/
-  justify-content: center;      /* vertical centering - how we position things in that direction e.g jutify content:center = center along the axis but justify content:space-between -> controls spacing */
+  justify-content: center;      /* how to align items against main axis - in this case vertically,vertical centering - how we position things in that direction e.g jutify content:center = center along the axis but justify content:space-between -> controls spacing */
   align-items: center;          /* horizontal centering , align-items: center centers everything horizontally within the flex container.*/
   height: 100vh;                /* full viewport height */
   background-color: beige;
@@ -78,12 +78,40 @@ nav {
   gap: 110px;                   /* space BETWEEN items */
   z-index: 1000px;            /* makes sure the nav bar is on top of other elements */
   background-color: rgb(185, 52, 107);
-  padding: 50px;
+  padding: 30px;
+  box-shadow: 10px 10px 10px -5px rgba(78, 5, 62, 0.753);   /*how much the shadow moves up right down etc and blur and colour*/
 }
 
 /* for colouring/format of each section */
 nav a {
   color: beige;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Miniver', cursive; /* using the imported font */
   font-size: 25px;
+  padding: 0px;
+  margin: 0px;
+  position: relative; 
+  text-decoration: none; /* removes the underline */
+  transition: color 0.3s, border-bottom 0.3s; /* smooth transition for hover effects */
+  padding-bottom: 5px; /* space between text and bottom border */
+
+}
+
+nav a:hover{
+  color: rgb(75, 196, 226);
+  border-bottom: 4px solid rgb(80, 153, 236); /* underline effect on hover */
+}
+
+body {
+   background-color: beige;
+}
+
+/* for the first section of content */
+
+.first-section {
+  border: 5px outset rgb(97, 31, 42);
+  padding: 20px;
+  background-color: rgb(41, 9, 9);
+  margin: 50px 0px 50px 0px; /* top, right, bottom, left */
+  border-radius: 30px; /* rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
 }
