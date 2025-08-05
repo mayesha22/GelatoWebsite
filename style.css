@@ -99,6 +99,7 @@ nav a {
 nav a:hover{
   color: rgb(75, 196, 226);
   border-bottom: 4px solid rgb(80, 153, 236); /* underline effect on hover */
+  background-color:rgba(235, 125, 192, 0.795) ; /* background colour on hover */
 }
 
 body {
@@ -131,5 +132,5 @@ body {
 }
 
 .nav-bar-margins {
-   margin-top: 15SS0px; 
+   margin-top: 150px; 
 }
