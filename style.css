@@ -1,7 +1,7 @@
     /* this is my external css syntax */
     
     h1{
-    font-size: 30px;
+    font-size: 40px;
     color: rgb(204, 78, 99);
     font-family:'Times New Roman', Times, serif
  }
@@ -114,4 +114,22 @@ body {
   margin: 50px 0px 50px 0px; /* top, right, bottom, left */
   border-radius: 30px; /* rounded corners */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
+}
+
+.first-section h2 {
+   color: orangered;
+   font-size: 40px;
+   font-family: "Miniver", cursive;
+   margin-bottom: 40px;
+   border-bottom: 10px dashed #a05c2f;
+   padding-bottom: 10px;
+  /* display: inline-block;  allows margin and padding to work properly and so the line doesnt take up the entire width just the inner content */
+  display: flex;
+   justify-content: center; /* centers the heading text */
+   align-items: center; /* vertically centers the heading text */
+   text-align: center; /* centers the text within the heading */
+}
+
+.nav-bar-margins {
+   margin-top: 15SS0px; 
 }
