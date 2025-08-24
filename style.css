@@ -1,16 +1,28 @@
     /* this is my external css syntax */
+
     
+/*
     h1{
-    font-size: 40px;
-    color: rgb(204, 78, 99);
+    font-size: 8rem;
+    color: rgb(231, 170, 180);
     font-family:'Times New Roman', Times, serif
  }
+ 
  h2 {
     font-size: 25px;
-    color: green;
+    color: orangered;
+    font-family: 'Miniver', cursive;
+ }
+    */
+
+
+ .subtitle {
+      font-size: 30px;
+      color: rgb(204, 78, 99);
+      font-family: 'Times New Roman', Times, serif;
+      font-style: bold; 
  }
 /* this removes bullets from the list element 
-
  #no-bullets {
     list-style-type:none;
     margin: 0;
@@ -27,21 +39,91 @@
     color: orangered;
 }
 
+/* Making the page fill the full viewport height */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
 /* centering of the gelato main pic */
 
 .center-box {
-  border: 4px outset rgb(253, 134, 130);
-  margin-top: 89px;           /* margin-top to push it down from the nav bar */
   display: flex;
+  padding-top: 6rem ; 
   flex-direction: column;       /* stack content vertically - What direction should things go*/
   justify-content: center;      /* how to align items against main axis - in this case vertically,vertical centering - how we position things in that direction e.g jutify content:center = center along the axis but justify content:space-between -> controls spacing */
   align-items: center;          /* horizontal centering , align-items: center centers everything horizontally within the flex container.*/
   height: 100vh;                /* full viewport height */
+  width:100%;                
   background-color: beige;
-  padding: 30px;
-  text-align: center;          /* centers text within the div - text and inline elements. horzonatally aligns inline content liek img and span inside a block*/
+  text-align: center;     /* centers text within the div - text and inline elements. horzonatally aligns inline content liek img and span inside a block*/
+  background-image: url('gelato.jpg'); /* background image */
+  background-size: cover; /* ensures the image covers the entire div */
+  background-repeat: no-repeat; /* prevents the image from repeating */
+  background-position: center center; /* centers the image within the div */
+  position: relative; /* allows for absolute positioning of child elements */
+  
 }
 
+.center-box::before {
+  content: ""; /* creates a pseudo-element */
+  position: absolute; /* allows for positioning */
+  top: 0; /* positions it at the top */
+  left: 0; /* positions it at the left */
+  right: 0;
+  bottom: 0;
+  margin: 0; 
+  background-color: rgba(0,0,0,0.5); /* semi-transparent black background */
+  z-index: 0; /* places it behind the content */
+}
+
+.gelato-header {
+   color: white;
+   font-family: 'times new roman', Times, serif;
+   font-size: 2rem;
+   text-align: center;
+   position: relative; 
+   padding: 2rem;
+   z-index: 1; /* places it above the pseudo-element */
+   margin-bottom: 5rem;
+
+}
+
+.custom-button {
+   display: flex;
+   z-index: 1;
+    padding-bottom: 5rem; /* space below the button */
+}
+
+
+.custom-button button{
+   background-color: rgb(185, 52, 107);
+   font-size: 20px;
+   padding: 20px 40px; /* padding for button */
+   border: 4px dashed white; /* removes default border */
+   border-radius: 0.5rem; /* rounded corners */
+   cursor: pointer; /* changes cursor to pointer on hover */
+   transition: background-color 0.3s; /* smooth transition for hover effect */
+   
+   
+}
+
+.custom-button button:hover {
+   background-color:salmon;
+
+}
+
+.custom-button button::after {
+   content: "🍦";
+}
+
+
+.custom-button a {
+   color: white; /* link color */
+   text-decoration: none; /* removes underline from links */
+}
 
 /* this is the css syntax for making the list element inline */
 /*
@@ -76,7 +158,7 @@ nav {
   display: flex;
   justify-content: center;     /* center the nav items */       
   gap: 110px;                   /* space BETWEEN items */
-  z-index: 1000px;            /* makes sure the nav bar is on top of other elements */
+  z-index: 1000;            /* makes sure the nav bar is on top of other elements */
   background-color: rgb(185, 52, 107);
   padding: 30px;
   box-shadow: 10px 10px 10px -5px rgba(78, 5, 62, 0.753);   /*how much the shadow moves up right down etc and blur and colour*/
@@ -109,12 +191,19 @@ body {
 /* for the first section of content */
 
 .first-section {
-  border: 5px outset rgb(97, 31, 42);
-  padding: 20px;
+  border: 5px solid rgb(97, 31, 42);
+  padding: 1rem;
   background-color: rgb(41, 9, 9);
-  margin: 50px 0px 50px 0px; /* top, right, bottom, left */
-  border-radius: 30px; /* rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
+  margin: 3rem auto; /* top/bottom, right/left is auto */
+  border-radius: 2rem; /* rounded corners */
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); /* subtle shadow for depth */
+  position: relative; 
+  display: flex;
+   flex-direction: column;
+   justify-content: center; 
+   align-items: center;
+   height: 30%;
+   width: 70%;
 }
 
 .first-section h2 {
@@ -131,6 +220,226 @@ body {
    text-align: center; /* centers the text within the heading */
 }
 
+.first-section li {
+  font-size: 1.5rem;
+  color: rgb(245, 172, 202);
+  margin-bottom: 1rem; /* space between list items */
+  padding-right: 5rem;;
+  text-align: center;
+  list-style:none;
+  display: inline-block;
+  
+}
+
+.first-section button {
+   background-color: rgb(185, 52, 107);   
+   text-align: center;
+   padding: 0.75rem 1.5rem;
+   display: flex;
+   flex-direction: column;
+   justify-content: center; 
+   align-items: center;
+}
+
+.first-section a {
+   color: white; 
+   text-decoration: none;
+   font-size: 1.5rem;
+   font-family: 'Times New Roman', Times, serif;
+
+
+}
+
 .nav-bar-margins {
    margin-top: 150px; 
+}
+
+/* link styling */
+.custom-link:link, .custom-link:visited {
+  color: rgb(185, 52, 107);
+  text-decoration: none; 
+  font-size: 20px;
+}
+
+/* Footer sectionn styling */
+main {
+   flex:1; /* allows the main content to take up available space */
+}
+
+ footer {
+   background-color: rgb(185, 52, 107);
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   bottom: 0;
+   width: 100%;
+   margin-bottom: 0px;
+   z-index: 1000;
+
+ }
+
+ footer p {
+   color: beige;
+   font-size: 1.25rem;
+ }
+
+ .nav-footer a {
+   text-decoration: none;
+   color: beige;
+   font-size: 1rem;
+  font-family: "Miniver", cursive;
+  margin-left: 1rem;
+
+}
+
+.social-icons li {
+   display: inline-block;
+   margin-right: 0.5rem;
+   font-size: 2rem; 
+}
+
+.social-icons a {
+   color: beige;
+    }
+   
+#facebook:hover {
+   color: blue;
+   transform: scale(1.2); /* scales the icon on hover */
+   transition: 0.3s ease; /* smooth transition for hover effect */
+
+}
+
+#insta:hover {
+   color: #ec78ad; 
+   transform: scale(1.2); /* scales the icon on hover */
+   transition: 0.3s ease; /* smooth transition for hover effect */
+
+}
+
+#twitter:hover {
+   color: #000000; 
+   transform: scale(1.2); /* scales the icon on hover */
+   transition: 0.3s ease; /* smooth transition for hover effect */
+
+}
+
+/*gallery section styling */
+
+#gallery-body {
+   background-color:rgba(185, 52, 107, 0.301)}
+
+#main-gallery-section {
+  margin-top: 8%;
+  padding: 0%;
+  text-align: center;
+
+}
+
+#main-gallery-section h2 {
+   font-size: 3rem;
+   font-family: miniver, cursive;
+   color: rgb(190, 29, 83);
+   text-decoration: underline;
+}
+
+
+#gallery {
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr; /* three equal columns */;
+   margin: 10px auto; /* centers the gallery */
+   gap: 4rem; /* space between images */
+   padding: 1rem; 
+   width: 80%;
+
+}
+
+#gallery figure {
+   margin: 0; /* removes default margin */
+   padding: 0; /* removes default padding */
+   text-align: center; /* centers the caption text */
+   position: relative; /* allows for absolute positioning of child elements */
+   
+}
+
+#main-gallery-section figcaption {
+   font-size: 1.5rem;
+   font-style: italic;
+   color: #881046;
+   background-color: #e09bba8f;
+   font-family: 'Times New Roman', Times, serif;
+   text-transform:capitalize; /* makes the text uppercase */
+   padding: 1rem;
+   z-index: 1; /* places it above the image */
+   position: absolute; /* allows for positioning */
+   bottom: 0; /* positions it at the bottom of the figure */
+   text-align: center;
+   width: 100%;
+   padding: 5%; /* adds padding around the caption */
+}
+
+#gallery img {
+   width: 100%; /* makes images responsive */
+   box-shadow: border-box; /* allows us to include padding and border in the element's total width and height */
+   border-radius: 10px; 
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* adds a shadow effect to images */
+   border: 1rem solid rgba(190, 29, 83, 0.425); /* adds a border to images */
+   border-radius: 0.5rem;
+}
+
+@media screen and (max-width: 700px) {
+   #gallery {
+      grid-template-columns: 1fr; /* single column layout for smaller screens */
+      width: 90vw;
+      margin-bottom: 20%; /* adds space below the gallery */
+   }
+   #gallery img {
+      width: 100%; /* ensures images take full width on smaller screens */
+   }
+   #main-gallery-section h2 {
+      font-size: 2rem; /* smaller heading for smaller screens */
+   }
+
+   #main-gallery-section figcaption {
+      font-size: 1.2rem; /* smaller caption for smaller screens */
+      padding: 0.5rem; /* reduces padding for smaller screens */
+   }
+}
+   
+label {
+   display: block; /* makes the label a block element */
+   margin-bottom: 0.5rem; /* space below the label */
+}
+
+.contact-box {
+   display: flex; /* allows for flexible layout */
+   flex-direction: column; /* stacks elements vertically */
+   align-items: center; /* centers elements horizontally */
+   justify-content: center; /* centers elements vertically */
+   height: 83vh; 
+   width: 60%; 
+   margin: 2rem auto; 
+   border-radius: 6%;
+   padding: 2rem; /* space around the content */
+   background-color: rgba(245, 136, 181, 0.637); /* semi-transparent background */
+}
+
+.contact-box h2 {
+   font-size: 3.5rem; /* larger heading */
+   color: rgb(94, 9, 37);
+   font-family: 'times new roman', Times, serif;
+   margin-bottom: 0.25rem; /* space below the heading */
+}
+
+.contact-box h3 {
+   font-size: 1.5rem; 
+   color: rgb(190, 29, 83);
+   font-family: 'Times New Roman', Times, serif
+   margin-bottom: 0.25rem; /* space below the heading */
+}
+
+.contact-box {
+   border: #881046 solid 5px; /* border around the contact form */
+   padding: 1rem; /* space around the form */
 }

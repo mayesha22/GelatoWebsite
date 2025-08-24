@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Gelato ice cream website showcasing products and flavors">
+        <meta name="keywords" content="Gelato, ice cream, flavors, products, desserts, ingredients for gelato">
+        <meta name="author" content="mayesha">
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+
+      <!-- <base href="https://gelatodelights.co.uk" target="_blank"> --> 
+
+
+
         <title> Gelato delights</title>
         <link rel="stylesheet" href="style.css">
 
         <link
         href="https://fonts.googleapis.com/css2?family=Miniver&display=swap" 
+        rel="stylesheet">
+
+        <link
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
         rel="stylesheet">
 
 <!--  If I were to do internal CSS, it would follow the below format:
@@ -45,7 +59,8 @@ a:visited {
 <style> 
 
 #written-content {
-         border: 4px outset orangered; padding: 30px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; width: 90%; height: 150px;
+         border: 4px outset orangered; padding: 30px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; width: 90%; height: 150px; 
+        /*  position: absolute; left: 200px; top: 300px; position absolute to place it in a specific location on the page */
 }
 
 </style>
@@ -59,53 +74,53 @@ a:visited {
 <nav> 
 <a href="nav-bar/products.html" target="_blank" > Products</a> 
 <a href="nav-bar/about-us.html" target="_blank" > About Us</a>
+<a href="nav-bar/gallery.html" target="_blank">Gallery</a>
 <a href="nav-bar/contact-us.html" target="_blank">Contact Us</a>
 </nav>
-        <!-- using list tag instead of nav tag
-        <div>
-            <ul class="custom-inline">
-                <li> <a href="nav-bar/products.html" target="_blank" > Products</a> </li>
-                <li> <a href="nav-bar/about-us.html" target="_blank" > About Us</a></li>
-                <li> <a href="nav-bar/contact-us.html" target="_blank">Contact Us</a></li>
-            </ul>
+        
+   <header>
+       <div class= "center-box">
+         <div class="gelato-header">
+           <h1> Welcome To The World Of <br> <span style="font-style:bold; font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"> Gelato!</span></h1>
+           <p> <span style="font-style: italic;">Gelato Deights, we pride ourselves on being a trusted supplier of premium-quality ingredients,<br>
+             delivering the finest flavors to gelato artisans</span>  </p>
+         </div>
+         <div class="custom-button">
+            <button> <a href="nav-bar/products.html" target="_blank"> View Our Products</a> </button>
+         </div>
         </div>
-        -->
-      <div class= "center-box">
-        <h1> Welcome To The World Of Gelato!</h1>
-        <a href="https://www.thekitchn.com/whats-the-difference-between-ice-cream-and-gelato-word-of-mouth-119657">
-          <img src="gelato.jpg" alt="This is an image of a few different types of gelato">
-          </a>
-      </div>
+
+   </header>
+
+
 
       <!-- below is the first list with flavours with the section tag-->
     
-      <section class="first-section">
-        
+<section class="first-section">    
    <h2> See below for some flavour reccomendations</h2>
     <p>
         <ul>
-            <li style = "font-size:20px; color: rgb(185, 143, 69);"> Mango </li>
-            <li style = "font-size:20px; color: rgb(82, 156, 21);"> Mixed summer berries </li>
-            <ul>
-                <li style = "font-size:20px; color: rgb(212, 170, 92);"> Strawberry </li>
-                <li style = "font-size:20px; color: rgb(185, 143, 69);"> Raspberry </li>
-                <li style = "font-size:20px; color: rgb(82, 156, 21);"> Blueberry </li>
-            </ul>
-            <li style = "font-size:20px; color: rgb(212, 170, 92);"> Vanilla </li>
-            <li style = "font-size:20px; color: rgb(185, 143, 69);"> Chocolate </li>
-            <li style = "font-size:20px; color: rgb(82, 156, 21);"> Pistachio </li>
+            <li> Mango </li>
+            <li> Strawberry </li>
+            <li> Raspberry </li>
+            <li> Blueberry </li>
+            <li> Vanilla </li>
+            <li> Chocolate </li>
+            <li> Pistachio </li>
         </ul>
    </p>
-        </section>
+    <button> <a href="nav-bar/products.html"> a full list of flavours we offer from our store</a> </button>
+</section>
    
-<!-- second main section/list with places to eat and its own border-->
+<main>
+<!-- main section/list with places to eat and its own border-->
     <div id="written-content" >
       <h2> Best places to have Gelato in Rome, Italy </h2>
       <ol>
-        <li> <a href="https://share.google/B5KFg1qwp2DLmaESJ">Come il Latte</a></li>
-        <li> <a href="https://share.google/57oE2ZHc7fmiQjHgQ">Gelateria del Teatro </a> </li>
-        <li> <a href="https://share.google/XNcJaXUWh5Ys4rjZ9">Gelateria Artigianale </a></li>
-        <li> <a href="https://share.google/blTKiUmRO7yR7XXuL">Gelateria dell'angeletto</a></li>
+        <li> <a href="https://share.google/B5KFg1qwp2DLmaESJ" class="custom-link">Come il Latte</a></li>
+        <li> <a href="https://share.google/57oE2ZHc7fmiQjHgQ" class="custom-link">Gelateria del Teatro </a> </li>
+        <li> <a href="https://share.google/XNcJaXUWh5Ys4rjZ9" class="custom-link">Gelateria Artigianale </a></li>
+        <li> <a href="https://share.google/blTKiUmRO7yR7XXuL" class="custom-link">Gelateria dell'angeletto</a></li>
       </ol>
     </div>
 
@@ -115,10 +130,32 @@ a:visited {
     </div>
 
      <hr>
-     <a href="otherpage.html" target="_blank"><em>Click here to learn how to make Gelato at home</em></a>
+     <a href="otherpage.html" target="_blank" class="custom-link"><em>Click here to learn how to make Gelato at home</em></a>
     <br>
      <p>  
-    <a href="mailto:mayesha51@gmail.com"> <strong> We would love to hear from you</strong>, click here to send a mail to us!</a>
+    <a href="mailto:mayesha51@gmail.com" class="custom-link"> <strong> We would love to hear from you</strong>, click here to send a mail to us!</a>
 </p>
+</main>
+
+<!-- footer section-->
+    <footer>
+        <p> &copy; 2025 Gelato Delights. All rights reserved.</p>
+        
+            <div class="nav-footer">
+                <a href="nav-bar/products.html" target="_blank"> Products</a>
+                <a href="nav-bar/about-us.html" target="_blank"> About Us</a>
+                <a href="nav-bar/gallery.html" target="_blank">Gallery</a>
+                <a href="nav-bar/contact-us.html" target="_blank">Contact Us</a>
+            </div>
+            <div class="social-icons">
+             <ul>
+                <li><a href="https://www.instagram.com" target="_blank" id="insta"><i class="fa-brands fa-instagram"></i></a></li>
+                <li><a href="https://www.facebook.com" target="_blank" id="facebook"><i class="fa-brands fa-facebook"></i></a></li>
+                <li><a href="https://www.twitter.com" target="_blank" id="twitter"><i class="fa-brands fa-square-x-twitter"></i></a></li>
+             </ul>
+          </div>
+       
+    </footer>
+
     </body>
 </html>
