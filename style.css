@@ -45,6 +45,12 @@ html, body {
   margin: 0;
   display: flex;
   flex-direction: column;
+  padding-top: 4rem; /* space for the fixed nav bar */
+}
+
+main {
+   flex:1; /* allows the main content to take up available space */
+   /* height: 80vh;  */
 }
 
 /* centering of the gelato main pic */
@@ -250,9 +256,6 @@ body {
 
 }
 
-.nav-bar-margins {
-   margin-top: 150px; 
-}
 
 /* link styling */
 .custom-link:link, .custom-link:visited {
@@ -262,9 +265,7 @@ body {
 }
 
 /* Footer sectionn styling */
-main {
-   flex:1; /* allows the main content to take up available space */
-}
+
 
  footer {
    background-color: rgb(185, 52, 107);
@@ -331,7 +332,6 @@ main {
    background-color:rgba(185, 52, 107, 0.301)}
 
 #main-gallery-section {
-  margin-top: 8%;
   padding: 0%;
   text-align: center;
 
@@ -435,11 +435,201 @@ label {
 .contact-box h3 {
    font-size: 1.5rem; 
    color: rgb(190, 29, 83);
-   font-family: 'Times New Roman', Times, serif
+   font-family: 'Times New Roman', Times, serif;
    margin-bottom: 0.25rem; /* space below the heading */
 }
 
 .contact-box {
    border: #881046 solid 5px; /* border around the contact form */
    padding: 1rem; /* space around the form */
+}
+
+/* table section styling */
+
+.table-overview {
+   position: relative;
+   margin: 0.5% auto 5% auto; /* 1% = gap under navbar, auto left/right = centers it horizontally, 5% bottom = space before footer */
+   padding: 2rem;
+   text-align: center;
+   background-color: rgb(177, 74, 122);
+   line-height: 1.5;
+   border-radius: 2rem;
+   /* height: auto ;   /* height adjusts based on content */
+   width: 70%;
+
+}
+
+table {
+   border-collapse: collapse; /* removes space between table cells */
+
+}
+.custom-table {
+   width: 100%;
+   margin-bottom: 5%;
+}
+
+.custom-table th{
+   font-family: miniver, cursive;
+   color: rgb(201, 201, 103);
+   font-size: 2.5rem;
+}
+
+.custom-table td {
+   font-family: 'Times New Roman', Times, serif;
+   text-align: center;
+   color: white;
+   border: #df90b4 solid 0.25rem; 
+   font-size: 2rem;
+   
+}
+
+.table-overview h1 {
+   font-size: 3rem;
+   font-family: 'Times New Roman', Times, serif;
+   font-style: italic;
+   color: beige;
+   text-decoration: underline;
+   margin-top: 0%;
+
+}
+   
+@media only screen and (max-width: 768px) {
+   .table-overview {
+      width: 90vw; /* makes the table section take up most of the viewport width on smaller screens */
+      padding: 1rem; /* reduces padding for smaller screens */
+      height: 80vh;
+      position: static;
+   }
+
+   .custom-table th {
+      font-size: 1.5rem; /* smaller heading for smaller screens */
+   }
+   .custom-table td {
+      font-size: 1rem; /* smaller table data for smaller screens */
+      padding: 0.5rem; /* adds padding to table cells for better readability */
+   }
+   .table-overview h1 {
+      font-size: 2rem; /* smaller heading for smaller screens */
+   }
+
+   main {
+      flex: none; /* disables flex-grow for main content */
+   }
+   nav {
+      font-size: 1rem;
+      gap: 10px; 
+      padding: 20px 0;
+      text-align: center;
+ }
+
+ body {
+   padding-top: 32px;
+ }
+
+  
+   
+}
+
+/* About us page styling */
+
+.about-us-outer-box {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   /* margin: 4rem auto; */
+   gap: 3rem; /* space between image and content */
+   padding: 1rem;
+
+}
+
+   .about-us-img {
+      flex: 6;
+      position: relative;
+      display: inline-block;
+      text-align: center;
+      padding: 0;
+      
+   }
+
+   .about-us-img img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+      border: 10px solid rgba(131, 17, 55, 0.425);
+      margin-bottom: 0rem;
+     
+      
+   }
+
+
+
+   .about-us-content {
+      flex:4;
+      padding: 2rem;
+      display: block;
+      background-color: rgba(255, 189, 216, 0.432); /* semi-transparent background */
+      border: #dda9c1 solid 5px; /* border around the contact form */
+      border-radius: 0.25rem;
+   }
+
+   .about-us-content p {
+      font-family: 'Times New Roman', Times, serif;
+      color: rgb(94, 9, 37);
+      text-align: center;
+      font-size: 1.5rem;
+      margin-bottom: 2.5rem;
+      
+   }  
+
+   .about-us-content h2 {
+      font-size: 3rem;
+      font-family: 'Miniver', cursive;
+      color: rgb(190, 29, 83);
+      text-decoration: underline;
+      text-align: center;
+   }
+
+   .about-us-button {
+      background-color: rgb(102, 13, 55);
+      border: white dashed 8px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.623);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 1.5%;
+      margin: 1rem 30rem 4rem 30rem;
+    
+   }
+
+   .about-us-button button {
+      background-color: rgb(179, 32, 179);
+      border: beige solid 5px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.623);
+      padding: 1rem 2rem;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s; /* smooth transition for hover effects */
+
+   }
+
+   .about-us-button h2 {
+      font-size: 2rem;
+      color: beige;
+      font-family: "Miniver", cursive;
+
+   }
+      .about-us-button button a {
+         color: white;
+         text-decoration: none;
+         font-size: 1.5rem;
+         font-family: 'Times New Roman', Times, serif;
+
+      }
+      .about-us-button button:hover {
+   background-color:salmon;
+
+}
+
+ .about-us-button button::after {
+   content: "😋";
 }
